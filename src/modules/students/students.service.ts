@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { StudentDocument, STUDENT_MODEL } from 'src/schemas/student';
+import { StudentDocument, STUDENT_MODEL } from '../schemas/student';
 import { Model } from 'mongoose';
 import { CreateStudentDTO } from './dto';
 

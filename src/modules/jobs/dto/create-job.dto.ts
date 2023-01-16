@@ -1,7 +1,7 @@
 import { Type } from 'class-transformer';
 import { IsEnum, IsMongoId, IsNotEmpty, IsNumber, IsOptional, IsString, ValidateNested } from 'class-validator';
-import { JOB_TYPE } from '../../constants';
-import { AddressDTO } from '../../dto';
+import { JOB_TYPE } from '../../../shared/constants';
+import { AddressDTO } from '../../../shared/dto';
 
 export class CreateJobDTO {
   @IsMongoId()

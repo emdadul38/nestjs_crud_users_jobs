@@ -10,8 +10,8 @@ import {
   IsString,
   ValidateNested,
 } from 'class-validator';
-import { AddressDTO } from '../../dto/address.dto';
-import { ACCOUNT_STATUS, ACCOUNT_TYPE } from 'src/constants';
+import { AddressDTO } from '../../../shared/dto/address.dto';
+import { ACCOUNT_STATUS, ACCOUNT_TYPE } from '../../../shared/constants';
 
 export class createUserDTO {
   @IsString()

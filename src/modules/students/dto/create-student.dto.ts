@@ -1,5 +1,5 @@
 import { IsBoolean, IsNotEmpty, IsOptional, IsString } from 'class-validator';
-import { createUserDTO } from 'src/users/dto/create-user.dto';
+import { createUserDTO } from '../../users/dto/create-user.dto';
 
 export class CreateStudentDTO extends createUserDTO {
   @IsString()

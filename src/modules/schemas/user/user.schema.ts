@@ -1,5 +1,5 @@
 import { Prop, raw, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { ACCOUNT_STATUS, ACCOUNT_TYPE } from 'src/constants';
+import { ACCOUNT_STATUS, ACCOUNT_TYPE } from '../../../shared/constants';
 import { Address, AddressSchema } from '../common';
 import { Document, Model, Query } from 'mongoose';
 

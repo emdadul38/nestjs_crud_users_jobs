@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { User, USER_MODEL } from '../user';
-import { JOB_TYPE } from 'src/constants';
+import { JOB_TYPE } from '../../../shared/constants';
 import { Address, AddressSchema } from '../common';
 
 @Schema({

@@ -3,8 +3,9 @@ import { InjectModel } from '@nestjs/mongoose';
 import { JobDocument, JOB_MODEL } from '../schemas/job';
 import { Model } from 'mongoose';
 import { CreateJobDTO, UpdateJobDTO } from './dto';
-import { UsersService } from 'src/users/users.service';
-import { ACCOUNT_TYPE } from 'src/constants';
+import { UsersService } from '../users/users.service';
+import { ACCOUNT_TYPE } from '../../shared/constants';
+
 
 @Injectable()
 export class JobsService {

@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { EmployerDocument, EMPLOYER_MODEL } from 'src/schemas/employer';
+import { EmployerDocument, EMPLOYER_MODEL } from '../schemas/employer';
 import { Model } from 'mongoose';
 import { CreateEmployerDTO } from './dto';
 
