@@ -1,0 +1,13 @@
+export declare enum ACCOUNT_TYPE {
+    STUDENT = "STUDENT",
+    TEACHER = "TEACHER",
+    ADMIN = "ADMIN",
+    EMPLOYER = "EMPLOYER"
+}
+export declare enum ACCOUNT_STATUS {
+    ACTIVE = "ACTIVE",
+    INACTIVE = "INACTIVE",
+    BLOCKED = "BLOCKED",
+    DELETED = "DELETED",
+    APPROVAL_PENDING = "APPROVAL_PENDING"
+}
