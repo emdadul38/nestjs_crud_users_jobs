@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "60dec59a-f61c-45bb-97ee-b432a63a81db",
+		"name": "NEST_CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "405611"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/search?name=",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Emdadul Huq\",\n    \"email\": \"emdad73@gmail.com\",\n    \"password\": \"123456\",\n    \"accountType\": \"ADMIN\",\n    \"address\": {\n        \"address1\": \"Barbandha\",\n        \"country\": \"Bangladesh\"\n    }\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/63c0edd95f09e7563227b707",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"63c0edd95f09e7563227b707"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"emdad792@gmail.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jobs",
+			"item": [
+				{
+					"name": "jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/jobs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"63c124d02ba519b17837799f\",\n    \"companyName\": \"ABC limited\",\n    \"title\": \"Software Engineer\",\n    \"description\": \"This is simple description\",\n    \"experience\": 6,\n    \"type\": \"FULL_TIME\",\n    \"tags\": [\"Nodejs\"],\n    \"salary\": \"$3000\",\n    \"location\": {\n        \"address1\": \"Dhaka\",\n        \"country\": \"Bangladesh\"\n    }\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/jobs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobs",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"title\": \"Sr. Software Engineer\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/jobs/63c125772ba519b1783779a3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"jobs",
+								"63c125772ba519b1783779a3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobs/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/jobs/63c125772ba519b1783779a3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"jobs",
+								"63c125772ba519b1783779a3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobs",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "students",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Motin Islam\",\n    \"email\": \"emdad081@gmail.com\",\n    \"password\": \"123456\",\n    \"accountType\": \"EMPLOYER\",\n    \"university\": \"BRUR\",\n    \"course\": \"CSE\",\n    \"grade\": \"3.50\",\n    \"isUnderintership\": false,\n    \"address\": {\n        \"address1\": \"Barbandha\",\n        \"country\": \"Bangladesh\"\n    }\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/students",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employers",
+			"item": [
+				{
+					"name": "employers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Motin Islam\",\n    \"email\": \"emdad081@gmail.com\",\n    \"password\": \"123456\",\n    \"accountType\": \"EMPLOYER\",\n    \"university\": \"BRUR\",\n    \"course\": \"CSE\",\n    \"grade\": \"3.50\",\n    \"isUnderintership\": false,\n    \"address\": {\n        \"address1\": \"Barbandha\",\n        \"country\": \"Bangladesh\"\n    }\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/employers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,16 @@
+import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { EmployerDocument, EMPLOYER_MODEL } from 'src/schemas/employer';
+import { Model } from 'mongoose';
+import { CreateEmployerDTO } from './dto';
+
+@Injectable()
+export class EmployersService {
+  constructor(@InjectModel(EMPLOYER_MODEL) private readonly employerModel: Model<EmployerDocument>) {}
+
+  async create(createEmployerDto: CreateEmployerDTO) {
+    const createdEmployer = await this.employerModel.create(createEmployerDto);
+
+    return createdEmployer;
+  }
+}
